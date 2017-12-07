@@ -1,5 +1,5 @@
 /**
- * Created by EZAZ on 29/5/2016.
+ * Created by EZAZ on 8/12/2017.
  */
 (function ($) {
     "use strict";
@@ -131,8 +131,6 @@
 /*Portfolio
 --------------------------------------------------------------------*/
 
-
-
 /* activate jquery isotope */
   $('.portfolio_items').isotope({
     itemSelector : '.item',
@@ -167,8 +165,57 @@
   });
 
 
+/*Wow.js
+---------------------------------------------------------*/
+
+    var wow = new WOW(
+              {
+                  boxClass:     'wow',      // animated element css class (default is wow)
+                  animateClass: 'animated', // animation css class (default is animated)
+                  offset:       0,          // distance to the element when triggering the animation (default is 0)
+                  mobile:       true,       // trigger animations on mobile devices (default is true)
+                  live:         true,       // act on asynchronously loaded content (default is true)
+                  callback:     function(box) {
+                      // the callback is fired every time an animation is started
+                      // the argument that is passed in is the DOM node being animated
+                  },
+                  scrollContainer: null // optional scroll container selector, otherwise use window
+              }
+      );
+      wow.init();
 
 
+/*Progress bar
+-------------------------------------*/
+$('#jq').LineProgressbar({
+    percentage:90,
+    radius: '3px',
+    height: '6px',
+    fillBackgroundColor: '#000000'
+    });
+    $('#html').LineProgressbar({
+    percentage:80,
+    radius: '3px',
+    height: '6px',
+    fillBackgroundColor: '#000000'
+    });
+    $('#css').LineProgressbar({
+    percentage:70,
+    radius: '3px',
+    height: '6px',
+    fillBackgroundColor: '#000000'
+    });
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36251023-1']);
+      _gaq.push(['_setDomainName', 'jqueryscript.net']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
 
 
