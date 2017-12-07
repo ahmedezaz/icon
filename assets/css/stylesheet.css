@@ -484,10 +484,9 @@ header{
 
 /* About Us
 ----------------------------------------------------------------*/
-#about img{
+.about-img{
     margin-top: 60px;
 }
-
 .about-paragraph{
     margin-top: 50px;
     padding-bottom: 30px;
